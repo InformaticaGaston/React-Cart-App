@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React , {useState} from "react";
+import CardsList from "./components/CardsList";
+import Navbar from "./components/Navbar";
+import Pub from "./components/Pub";
+import Cart from "./components/Cart";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+ 
+} from "react-router-dom";
 
+ 
 function App() {
+  const [cards,setCards] = useState()
+ const [cartItems, setCartItems] = useState([]);
+ 
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Router>
+     <div> 
+       <Navbar/> 
+      <Pub/>
+      
+       
+       <Switch>
+       <Route exact path='/'render={(props) => (<CardsList {...props} cartItems={cards}  setCartItem={setCards} />)}/> 
+        <Route path='/cart'  render={(props) => (<Cart {...props} cartItems={cartItems}  setCartItem={setCartItems} />)}/>
+      </Switch>
+      
+      </div>
+    </Router>
+    
   );
 }
 

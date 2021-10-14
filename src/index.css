@@ -1,13 +1,137 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+}
+/* navbar */
+.navbar {
+  display: flex;
+   background-color: #2d2d2d;
+   height: 60px;
+   align-items: center ;
+   height: 100px ;
+  
+}
+.navbar h1 {
+  margin-left: 30px;
+  margin-right: 50px;
+  color: white;
+
+
+}
+a {
+  text-decoration: none; 
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  list-style-type: none;
 }
+.search-input , 
+.search-btn {
+  
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  height: 38px;
+  background-color: white;
+  padding-left: 16px;
+  
+}
+.search-input {
+  margin-left: 200px;
+  width: 300px;
+  border-radius: 25px 0 0 25px  ;
+  
+ }
+
+ .search-btn {
+  cursor: pointer;
+  border-radius:  0 25px  25px 0 ;
+  padding-right: 30px;
+  
+    
+ }
+ 
+ .cart-btn {
+   margin-left: 200px;
+   border: none;
+   outline: none;
+   background-color: transparent;
+   color: white;
+   font-size: 1.5rem;
+   cursor: pointer;
+   position: fixed;
+ }
+
+/*pub*/
+
+.pub {
+  overflow: hidden;
+  height: 400px;
+  background-image:  url('./models.jpg');
+  
+}
+
+
+
+
+h2 {
+  margin-top: 150px;
+  background-color: #ed7000;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  color: white;
+  margin-right: 25%;
+  margin-left: 25%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.cards-list {
+display: flex; 
+justify-content: center;
+flex-wrap: wrap;
+
+/* card */
+}
+.card {
+  margin-top: 30px; 
+  width: 283px;
+  margin-left: 40px;
+}
+.card-img {
+  height: 423px;
+  width: 283px;
+}
+.npb{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.card p {
+  margin-top: 5px;
+}
+
+.buy-btn {
+  border: none;
+  outline: none;
+  border-radius: 20%;
+  cursor: pointer;
+  width: 50px;
+  font-size: 1.2rem;
+  background-color: #ed7000;
+  color: white;
+  margin-top: 5px;
+}
+
